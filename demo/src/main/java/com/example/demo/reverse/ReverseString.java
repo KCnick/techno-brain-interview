@@ -1,4 +1,4 @@
-package com.example.demo.services.reverse;
+package com.example.demo.reverse;
 
 import org.springframework.stereotype.Component;
 

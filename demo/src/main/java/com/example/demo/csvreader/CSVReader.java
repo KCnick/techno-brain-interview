@@ -1,4 +1,4 @@
-package com.example.demo.services.csvreader;
+package com.example.demo.csvreader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

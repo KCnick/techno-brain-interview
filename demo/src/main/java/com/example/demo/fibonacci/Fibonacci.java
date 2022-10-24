@@ -1,4 +1,4 @@
-package com.example.demo.services.fibonacci;
+package com.example.demo.fibonacci;
 
 import java.util.ArrayList;
 import java.util.List;
