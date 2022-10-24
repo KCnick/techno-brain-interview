@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class CSVReader {
     public static void main (String [] args) throws IOException {
-        String file = "/home/nick/workspaces/techno-brain-interview/demo/src/main/java/com/example/demo/services/csvreader/log.csv";
+        String file = "/home/nick/workspaces/techno-brain-interview/demo/src/main/java/com/example/demo/csvreader/log.csv";
         String line;
         List<String> ipAddresses = new ArrayList<> ();
         BufferedReader bufferedReader = new BufferedReader ( new FileReader ( file ) );
@@ -25,17 +25,17 @@ public class CSVReader {
     }
 
     private static List<String> findTheTenIpsWithMostAccess ( List<String> ipAddresses ) {
-       Map<String, Integer> elementCount = new HashMap<> ();
-       for(String ipAddress : ipAddresses){
-           if(elementCount.containsKey ( ipAddress )){
-               int count = elementCount.get ( ipAddress ) + 1;
-               elementCount.put ( ipAddress, count );
-           }else{
-               elementCount.put ( ipAddress, 1 );
-           }
-       }
+        Map<String, Integer> elementCount = new HashMap<> ();
+        for(String ipAddress : ipAddresses){
+            if(elementCount.containsKey ( ipAddress )){
+                int count = elementCount.get ( ipAddress ) + 1;
+                elementCount.put ( ipAddress, count );
+            }else{
+                elementCount.put ( ipAddress, 1 );
+            }
+        }
 
-       return findFirstTenElements(elementCount);
+        return findFirstTenElements(elementCount);
 
     }
 
@@ -49,5 +49,6 @@ public class CSVReader {
 
         return keys;
     }
+
 
 }
